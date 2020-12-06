@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BasicElement | trs80-base - v1.0.0</title>
+	<title>CmdLoadModuleHeaderChunk | trs80-base - v1.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_basic_.html">&quot;Basic&quot;</a>
+					<a href="../modules/_cmdprogram_.html">&quot;CmdProgram&quot;</a>
 				</li>
 				<li>
-					<a href="_basic_.basicelement.html">BasicElement</a>
+					<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html">CmdLoadModuleHeaderChunk</a>
 				</li>
 			</ul>
-			<h1>Class BasicElement</h1>
+			<h1>Class CmdLoadModuleHeaderChunk</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Piece of a Basic program (token, character, line number).</p>
+						<p>A header chunk for the filename.</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BasicElement</span>
+						<a href="_cmdprogram_.cmdchunk.html" class="tsd-signature-type">CmdChunk</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CmdLoadModuleHeaderChunk</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,16 +94,15 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_basic_.basicelement.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_basic_.basicelement.html#elementtype" class="tsd-kind-icon">element<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_basic_.basicelement.html#length" class="tsd-kind-icon">length</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_basic_.basicelement.html#offset" class="tsd-kind-icon">offset</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_basic_.basicelement.html#text" class="tsd-kind-icon">text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#filename" class="tsd-kind-icon">filename</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#rawdata" class="tsd-kind-icon">raw<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,32 +110,30 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Basic<wbr>Element<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, elementType<span class="tsd-signature-symbol">: </span><a href="../enums/_basic_.elementtype.html" class="tsd-signature-type">ElementType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_basic_.basicelement.html" class="tsd-signature-type">BasicElement</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Cmd<wbr>Load<wbr>Module<wbr>Header<wbr>Chunk<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cmdprogram_.cmdloadmoduleheaderchunk.html" class="tsd-signature-type">CmdLoadModuleHeaderChunk</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_cmdprogram_.cmdchunk.html">CmdChunk</a>.<a href="_cmdprogram_.cmdchunk.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in Basic.ts:88</li>
+									<li>Defined in CmdProgram.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>type: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>elementType: <a href="../enums/_basic_.elementtype.html" class="tsd-signature-type">ElementType</a></h5>
+									<h5>data: <span class="tsd-signature-type">Uint8Array</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_basic_.basicelement.html" class="tsd-signature-type">BasicElement</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_cmdprogram_.cmdloadmoduleheaderchunk.html" class="tsd-signature-type">CmdLoadModuleHeaderChunk</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -139,42 +141,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="elementtype" class="tsd-anchor"></a>
-					<h3>element<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">element<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_basic_.elementtype.html" class="tsd-signature-type">ElementType</a></div>
+					<a name="filename" class="tsd-anchor"></a>
+					<h3>filename</h3>
+					<div class="tsd-signature tsd-kind-icon">filename<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Basic.ts:88</li>
+							<li>Defined in CmdProgram.ts:58</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="length" class="tsd-anchor"></a>
-					<h3>length</h3>
-					<div class="tsd-signature tsd-kind-icon">length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="rawdata" class="tsd-anchor"></a>
+					<h3>raw<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">raw<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_cmdprogram_.cmdchunk.html">CmdChunk</a>.<a href="_cmdprogram_.cmdchunk.html#rawdata">rawData</a></p>
 						<ul>
-							<li>Defined in Basic.ts:82</li>
+							<li>Defined in CmdProgram.ts:20</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="offset" class="tsd-anchor"></a>
-					<h3>offset</h3>
-					<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_cmdprogram_.cmdchunk.html">CmdChunk</a>.<a href="_cmdprogram_.cmdchunk.html#type">type</a></p>
 						<ul>
-							<li>Defined in Basic.ts:79</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="text" class="tsd-anchor"></a>
-					<h3>text</h3>
-					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in Basic.ts:85</li>
+							<li>Defined in CmdProgram.ts:19</li>
 						</ul>
 					</aside>
 				</section>
@@ -186,10 +180,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_basic_.html">&quot;<wbr>Basic&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_cmdprogram_.html">&quot;<wbr>Cmd<wbr>Program&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -199,41 +193,53 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_basic_.elementtype.html" class="tsd-kind-icon">Element<wbr>Type</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_cmdprogram_.cmdchunk.html" class="tsd-kind-icon">Cmd<wbr>Chunk</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_cmdprogram_.cmdloadblockchunk.html" class="tsd-kind-icon">Cmd<wbr>Load<wbr>Block<wbr>Chunk</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_basic_.basicelement.html" class="tsd-kind-icon">Basic<wbr>Element</a>
+						<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html" class="tsd-kind-icon">Cmd<wbr>Load<wbr>Module<wbr>Header<wbr>Chunk</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_basic_.basicelement.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_basic_.basicelement.html#elementtype" class="tsd-kind-icon">element<wbr>Type</a>
+								<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#filename" class="tsd-kind-icon">filename</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_basic_.basicelement.html#length" class="tsd-kind-icon">length</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#rawdata" class="tsd-kind-icon">raw<wbr>Data</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_basic_.basicelement.html#offset" class="tsd-kind-icon">offset</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_basic_.basicelement.html#text" class="tsd-kind-icon">text</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_cmdprogram_.cmdloadmoduleheaderchunk.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_basic_.html#fromtokenized" class="tsd-kind-icon">from<wbr>Tokenized</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_cmdprogram_.cmdprogram.html" class="tsd-kind-icon">Cmd<wbr>Program</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_cmdprogram_.cmdtransferaddresschunk.html" class="tsd-kind-icon">Cmd<wbr>Transfer<wbr>Address<wbr>Chunk</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_cmdprogram_.html#cmd_load_block" class="tsd-kind-icon">CMD_<wbr>LOAD_<wbr>BLOCK</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_cmdprogram_.html#cmd_load_module_header" class="tsd-kind-icon">CMD_<wbr>LOAD_<wbr>MODULE_<wbr>HEADER</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_cmdprogram_.html#cmd_max_type" class="tsd-kind-icon">CMD_<wbr>MAX_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_cmdprogram_.html#cmd_transfer_address" class="tsd-kind-icon">CMD_<wbr>TRANSFER_<wbr>ADDRESS</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_basic_.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_basic_.html#wrapbasic" class="tsd-kind-icon">wrap<wbr>Basic</a>
+						<a href="../modules/_cmdprogram_.html#iscmdprogram" class="tsd-kind-icon">is<wbr>Cmd<wbr>Program</a>
 					</li>
 				</ul>
 			</nav>
